@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% block content %}
+<div class="block-center navbar br-0" style="height: 540px;">
+    <div class="row" style="margin: 0;">
+        <div class="col-sm-12">
+            <div class="col-sm-3 col-sm-offset-1">
+                <select class="btn btn-success teams1-list">
+                    <option value="">Team 1 Choices</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <select class="btn btn-success teams2-list">
+                    <option value="">Team 2 Choices</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <button id="#filter" class="btn btn-success" onclick="callFilter()">Filter</button>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Team 1</th>
+                    <th>Team 2</th>
+                    <th>Match Date</th>
+                    <th>Winner</th>
+                    <th>Winning stats</th>
+                </tr>
+            </thead>
+            <tbody class="match-list"></tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+$.ajax({
+    url : "/teams/",
+    dataType: "json",
+    success : function (data) {
+        $(".teams-list").html("");
+        console.log(data);
+        $.each(data['results'],
+            function(idx,team) {
+                $(".teams1-list").append("<option value="+team.id+">" + team.name + "</option>");
+                $(".teams2-list").append("<option value="+team.id+">" + team.name + "</option>");
+            } // anonymous function
+        ); // each()
+    }
+});
+function callFilter() {
+    getMatches("/matches/?teams="+$('.teams1-list').val()+","+$('.teams2-list').val());
+}
+getMatches("/matches/");
+function getMatches(url) {
+    console.log(url);
+    $.ajax({
+    url : url,
+    dataType: "json",
+    success : function (data) {
+        $(".match-list").html("");
+        console.log(data);
+        $.each(data['results'],
+            function(idx,match) {
+                if (match.winner != null) { 
+                    var winner = match.winner.name;
+                } else {
+                    var winner = '';
+                }
+                $(".match-list").append("<tr><td>" + match.team1.name + "</td><td>" + match.team2.name + "</td><td>" + match.date + "</td><td>" + winner + "</td><td>" + match.winning_stat + "</td></tr>");
+            } // anonymous function
+        ); // each()
+    }
+});
+}
+</script>
+{% endblock content %}

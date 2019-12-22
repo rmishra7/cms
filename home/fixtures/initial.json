@@ -1,0 +1,372 @@
+[
+    {  
+        "pk":1,
+        "model":"teams.Team",
+        "fields":{  
+            "name":"Royal Challengers Bangalore",
+            "logouri":"/static/img/teams/rcb.png",
+            "club_state": "Bangalore"
+        }
+    },
+    {  
+        "pk":2,
+        "model":"teams.Team",
+        "fields":{  
+            "name":"Chennai Super Kings",
+            "logouri":"/static/img/teams/csk.png",
+            "club_state": "Chennai"
+        }
+    },
+    {  
+        "pk":3,
+        "model":"teams.Team",
+        "fields":{  
+            "name":"Mumbai Indians",
+            "logouri":"/static/img/teams/mi.png",
+            "club_state": "Mumbai"
+        }
+    },
+    {  
+        "pk":4,
+        "model":"teams.Team",
+        "fields":{  
+            "name":"Sunrisers Hyderabad",
+            "logouri":"/static/img/teams/sh.jpeg",
+            "club_state": "Hyderabad"
+        }
+    },
+    {  
+        "pk":1,
+        "model":"players.Player",
+        "fields":{  
+            "team":1,
+            "first_name":"Virat",
+            "last_name": "Kohli",
+            "imageuri":"/static/img/players/vk.jpeg",
+            "jersey_no": "8",
+            "country": "India",
+            "matches":"230",
+            "run":"11023",
+            "highest_score": "165",
+            "halfcentury":"45",
+            "century": "43"
+        }
+    },
+    {  
+        "pk":2,
+        "model":"players.Player",
+        "fields":{  
+            "team":1,
+            "first_name":"Rohit",
+            "last_name": "Sharma",
+            "imageuri":"/static/img/players/rs.jpeg",
+            "jersey_no": "12",
+            "country": "India",
+            "matches":"230",
+            "run":"8980",
+            "highest_score": "253",
+            "halfcentury":"43",
+            "century": "34"
+        }
+    },
+    {  
+        "pk":3,
+        "model":"players.Player",
+        "fields":{  
+            "team":1,
+            "first_name":"Rishabh",
+            "last_name": "Pant",
+            "imageuri":"/static/img/players/rp.jpeg",
+            "jersey_no": "23",
+            "country": "India",
+            "matches":"23",
+            "run":"1200",
+            "highest_score": "89",
+            "halfcentury":"7",
+            "century": "0"
+        }
+    },
+    {  
+        "pk":4,
+        "model":"players.Player",
+        "fields":{  
+            "team":2,
+            "first_name":"kieron",
+            "last_name": "Pollard",
+            "imageuri":"/static/img/players/kp.jpeg",
+            "jersey_no": "34",
+            "country": "West Indies",
+            "matches":"234",
+            "run":"8700",
+            "highest_score": "134",
+            "halfcentury":"35",
+            "century": "18"
+        }
+    },
+    {  
+        "pk":5,
+        "model":"players.Player",
+        "fields":{  
+            "team":2,
+            "first_name":"Chris",
+            "last_name": "Gayle",
+            "imageuri":"/static/img/players/cg.jpeg",
+            "jersey_no": "23",
+            "country": "West Indies",
+            "matches":"254",
+            "run":"7800",
+            "highest_score": "178",
+            "halfcentury":"45",
+            "century": "19"
+        }
+    },
+    {  
+        "pk":6,
+        "model":"players.Player",
+        "fields":{  
+            "team":2,
+            "first_name":"Jason",
+            "last_name": "Holder",
+            "imageuri":"/static/img/players/jh.jpeg",
+            "jersey_no": "45",
+            "country": "West Indies",
+            "matches":"178",
+            "run":"3400",
+            "highest_score": "154",
+            "halfcentury":"27",
+            "century": "12"
+        }
+    },
+    {  
+        "pk":7,
+        "model":"players.Player",
+        "fields":{  
+            "team":3,
+            "first_name":"Steve",
+            "last_name": "Smith",
+            "imageuri":"/static/img/players/ss.jpeg",
+            "jersey_no": "34",
+            "country": "Australia",
+            "matches":"234",
+            "run":"9800",
+            "highest_score": "156",
+            "halfcentury":"45",
+            "century": "28"
+        }
+    },
+    {  
+        "pk":8,
+        "model":"players.Player",
+        "fields":{  
+            "team":3,
+            "first_name":"David",
+            "last_name": "Warner",
+            "imageuri":"/static/img/players/dw.jpeg",
+            "jersey_no": "54",
+            "country": "Australia",
+            "matches":"223",
+            "run":"7890",
+            "highest_score": "178",
+            "halfcentury":"44",
+            "century": "23"
+        }
+    },
+    {  
+        "pk":9,
+        "model":"players.Player",
+        "fields":{  
+            "team":4,
+            "first_name":"Ben",
+            "last_name": "Stokes",
+            "imageuri":"/static/img/players/bs.jpeg",
+            "jersey_no": "33",
+            "country": "England",
+            "matches":"220",
+            "run":"7890",
+            "highest_score": "165",
+            "halfcentury":"34",
+            "century": "18"
+        }
+    },
+    {  
+        "pk":10,
+        "model":"players.Player",
+        "fields":{  
+            "team":4,
+            "first_name":"Joe",
+            "last_name": "Root",
+            "imageuri":"/static/img/players/jr.jpeg",
+            "jersey_no": "56",
+            "country": "England",
+            "matches":"187",
+            "run":"5600",
+            "highest_score": "145",
+            "halfcentury":"34",
+            "century": "17"
+        }
+    },
+    {  
+        "pk":1,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 1,
+            "team2": 2,
+            "date": "2019-10-01",
+            "winning_stat":"win by 8 wickets",
+            "winner": 2
+        }
+    },
+    {  
+        "pk":2,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 1,
+            "team2": 3,
+            "date": "2019-10-10",
+            "winning_stat":"win by 87 runs",
+            "winner": 4
+        }
+    },
+    {  
+        "pk":3,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 1,
+            "team2": 4,
+            "date": "2019-10-18",
+            "winning_stat":"win by 3 wickets",
+            "winner": 1
+        }
+    },
+    {  
+        "pk":4,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 2,
+            "team2": 1,
+            "date": "2019-10-25",
+            "winning_stat": "win by 12 runs",
+            "winner": 2
+        }
+    },
+    {  
+        "pk":5,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 2,
+            "team2": 3,
+            "date": "2019-11-08",
+            "winning_stat": "win by 7 wickets",
+            "winner": 3
+        }
+    },
+    {  
+        "pk":6,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 2,
+            "team2": 4,
+            "date": "2019-11-15",
+            "winning_stat": "win by 100 runs",
+            "winner": 4
+        }
+    },
+    {  
+        "pk":7,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 3,
+            "team2": 1,
+            "date": "2019-11-21",
+            "winning_stat": "win by 4 wickets",
+            "winner": 1
+        }
+    },
+    {  
+        "pk":8,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 3,
+            "team2": 2,
+            "date": "2019-12-29",
+            "winning_stat": "win by 67 runs",
+            "winner": 3
+        }
+    },
+    {  
+        "pk":9,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 3,
+            "team2": 4,
+            "date": "2019-12-09",
+            "winning_stat": "win by 8 wickets",
+            "winner": 4
+        }
+    },
+    {  
+        "pk":10,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 4,
+            "team2": 1,
+            "date": "2019-12-27",
+            "winning_stat": "Yet to Play",
+            "winner": null
+        }
+    },
+    {  
+        "pk":11,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 4,
+            "team2": 2,
+            "date": "2019-12-29",
+            "winning_stat": "Yet to Play",
+            "winner": null
+        }
+    },
+    {  
+        "pk":12,
+        "model":"matches.Match",
+        "fields":{  
+            "team1": 4,
+            "team2": 3,
+            "date": "2019-12-29",
+            "winning_stat": "Yet to Play",
+            "winner": null
+        }
+    },
+    {  
+        "pk":1,
+        "model":"points.PointTable",
+        "fields":{  
+            "team":1,
+            "points":"8"
+        }
+    },
+    {  
+        "pk":2,
+        "model":"points.PointTable",
+        "fields":{  
+            "team":2,
+            "points":"4"
+        }
+    },
+    {  
+        "pk":3,
+        "model":"points.PointTable",
+        "fields":{  
+            "team":3,
+            "points":"4"
+        }
+    },
+    {  
+        "pk":4,
+        "model":"points.PointTable",
+        "fields":{  
+            "team":4,
+            "points":"4"
+        }
+    }
+]

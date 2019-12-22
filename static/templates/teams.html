@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% block content %}
+<div class="block-center navbar br-0">
+     <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Logo URI</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="teams-list"></tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+$.ajax({
+    url : "/teams/",
+    dataType: "json",
+    success : function (data) {
+        $(".teams-list").html("");
+        console.log(data);
+        $.each(data['results'],
+            function(idx,team) {
+                $(".teams-list").append("<tr><td>" + team.name + "</td><td><img width='20%' src=" +
+                       window.location.origin + team.logouri + "></td><td><a href='/player-dashboard/?team_id=" + team.id + "'>Detail</a></td></tr>");
+            } // anonymous function
+        ); // each()
+    }
+});
+</script>
+{% endblock content %}

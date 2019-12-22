@@ -1,0 +1,33 @@
+.br-0 {
+	border-radius: 0;
+	margin: 0;
+}
+.fl-right {
+	float: right !important;
+	margin-top: 5px !important;
+}
+.footer-text {
+	color: white;
+    text-align: center;
+    padding-top: 12px;
+}
+.home-banner {
+	background-color: #007bff;
+	height: 320px;
+}
+.ft-3em{
+	font-size: 3em;
+}
+.ft-2em{
+	font-size: 2em;
+}
+th, td{
+	text-align: center !important;
+}
+.mb-220{
+	margin-bottom: 220px;
+}
+.ml-caret {
+	margin-left: 20px !important;
+    margin-top: 0 !important;
+}

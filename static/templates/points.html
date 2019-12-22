@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% block content %}
+<div class="block-center navbar br-0">
+     <div class="table-responsive" style="height: 540px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody class="points-list"></tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+$.ajax({
+    url : "/points/",
+    dataType: "json",
+    success : function (data) {
+        $(".points-list").html("");
+        console.log(data);
+        $.each(data['results'],
+            function(idx, point) {
+                $(".points-list").append("<tr><td>" + point.team.name + "</td><td>" + point.points + "</td></tr>");
+            } // anonymous function
+        ); // each()
+    }
+});
+</script>
+{% endblock content %}
