@@ -102,18 +102,18 @@ WSGI_APPLICATION = 'cms.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cms',
-        'USER': 'performance',
-        'PASSWORD': 'Arc2016!',
-        'HOST': '',
-        'PORT': '',
-    }
     # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'cms'),
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'cms',
+    #     'USER': 'performance',
+    #     'PASSWORD': 'Arc2016!',
+    #     'HOST': '',
+    #     'PORT': '',
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'cms.sqlite3'),
+    }
 }
 
 
